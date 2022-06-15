@@ -151,6 +151,10 @@ mvn -version
 ```shell
 yum install git
 ```
+> 生成Key
+```shell
+ssh-keygen -t rsa -b 2048 -C "任意字符建议邮箱"
+```
 > 配置用户名和邮箱：
 ```shell
 git config --global user.name "username"
@@ -190,11 +194,7 @@ yum install -y openssl openssl-devel
 ```shell
 tar -zxvf nginx-1.22.0.tar.gz -C /opt
 ```
->进入nginx目录中
-
-![img.png](../static/img/centos/nginx_1.png)
-
-> 安装前配置nginx
+> 安装前配置nginx(Nginx安装目录为 /opt/nginx)
 ```dtd
 默认配置命令
 ./configure
@@ -211,17 +211,9 @@ whereis nginx
 默认安装目录: /usr/local/nginx
 ```
 > 配置nginx全局环境变量
+> 将nginx安装目录下的启动文件建立软连接至系统环境变量目录中
 ```shell
-# 1.编辑系统环境配置文件
-vim /etc/profile
-
-# 2.将一下内容copy至系统环境配置文件
-#Nginx
-export NGINX_PATH=/usr/local/nginx
-export PATH=$PATH:${JAVA_HOME}/bin:$PATH:${NGINX_PATH}/sbin
-
-# 3.刷新配置文件
-source /etc/profile
+ln -s /opt/nginx/sbin/nginx /usr/local/bin/
 ```
 > 相关命令
 ```shell
@@ -231,11 +223,8 @@ nginx -s reload
 killall nginx
 # 停止服务
 nginx -s stop
-# 启动Nginx服务器
-start nginx
 # 检查配置文件
 nginx -t
+# 启动nginx并指定配置文件
+nginx -c /opt/conf/nginx.conf
 ```
-
-### Redis
-

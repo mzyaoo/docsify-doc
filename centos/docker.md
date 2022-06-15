@@ -17,8 +17,8 @@ yum install docker-ce
 ```shell
 systemctl start docker
 ```
-### Docker镜像常用命令
 
+### Docker镜像常用命令
 > 搜索镜像
 ```shell
 docker search 镜像名称
@@ -27,4 +27,3 @@ docker search 镜像名称
 ```shell
 docker pull 镜像名称:版本号
 ```
-> 
