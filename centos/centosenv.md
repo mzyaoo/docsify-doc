@@ -1,7 +1,11 @@
 # CentosOS 环境搭建
 
-## JDK
+### JDK
 [JDK-1.8 点击下载](https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/jdk-8u333-linux-x64.tar.gz)
+> 下载 JDK-1.8
+```shell
+wget https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/jdk-8u333-linux-x64.tar.gz
+```
 > 上传并解压至opt目录下
 ```shell
 tar -zxvf jdk-8u333-linux-x64.tar.gz -C /opt
@@ -30,8 +34,7 @@ java -version
 ###### 如图
 ![img.png](../static/img/centos/java_2.png)
 
-## MySql-8.0
-
+### MySql-8.0
 >创建并进入mysql文件夹
 ```shell
 mkdir /opt/mysql
@@ -105,8 +108,12 @@ firewall-cmd --reload
 ```
 > mysql配置完成，接下来就可以使用外部可视化工具进行连接
 
-## Maven
+### Maven
 [maven-3.8.5 点击下载](https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/apache-maven-3.8.5-bin.tar.gz)
+> 下载 maven-3.8.5
+```shell
+wget https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/apache-maven-3.8.5-bin.tar.gz
+```
 > 上传并解压至/opt/maven目录下
 ```shell
 mkdir /opt/maven
@@ -139,7 +146,7 @@ mvn -version
 ###### 如图
 ![示例图](../static/img/centos/maven_2.png)
 
-## Git
+### Git
 > yum安装git
 ```shell
 yum install git
@@ -162,8 +169,12 @@ git config --global credential.helper store
 git credential-manager uninstall
 ```
 
-## Nginx
+### Nginx
 [nginx-1.22 点击下载](https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/nginx-1.22.0.tar.gz)
+> 下载nginx-1.22
+```shell
+wget https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/nginx-1.22.0.tar.gz
+```
 > 安装nginx依赖环境
 ```shell
 # 1.编译依赖 gcc 环境
@@ -225,3 +236,6 @@ start nginx
 # 检查配置文件
 nginx -t
 ```
+
+### Redis
+

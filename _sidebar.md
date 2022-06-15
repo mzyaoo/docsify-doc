@@ -3,7 +3,7 @@
   * [Mac相关](mac/mac.md)
   * [JAVA基础知识](java/java-doc.md)
 * 项目技术
-  * [demo](java/item.md)
+  * [个人项目总结](java/myProject.md)
 * CentOS相关
   * [CentOS环境搭建](centos/centosenv.md)
   * [Docker环境搭建](centos/docker.md)
