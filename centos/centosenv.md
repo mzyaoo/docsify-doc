@@ -124,7 +124,6 @@ cd /opt/maven
 
 mkdir MyRepository
 ```
-
 ![解压示例图](../static/img/centos/maven_1.png)
 > 配置Maven全局环境变量
 ```shell
@@ -227,4 +226,33 @@ nginx -s stop
 nginx -t
 # 启动nginx并指定配置文件
 nginx -c /opt/conf/nginx.conf
+```
+
+### Node.js
+[Node.js-16.15.1 点击下载](https://registry.npmmirror.com/-/binary/node/v16.15.1/node-v16.15.1-linux-x64.tar.gz)
+> 下载Node.js 安装包
+```shell
+wget https://registry.npmmirror.com/-/binary/node/v16.15.1/node-v16.15.1-linux-x64.tar.gz
+```
+> 解压至/opt目录中
+```shell
+tar -zxvf node-v16.15.1-linux-x64.tar.gz -C /opt/
+```
+> 建立软链接,全局使用node命令和npm命令
+```shell
+ln -s /opt/node-v16.15.1-linux-x64/bin/node /usr/local/bin/node
+ln -s /opt/node-v16.15.1-linux-x64/bin/npm /usr/local/bin/npm
+```
+> 检查是否安装成功
+```shell
+node -v
+npm -v
+```
+> npm配置国内镜像源
+```shell
+npm config set registry https://registry.npm.taobao.org
+```
+>查看npm镜像源地址
+```shell
+npm config get registry
 ```
