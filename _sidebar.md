@@ -1,7 +1,8 @@
 <!-- 侧边栏配置文件 -->
 * 部署篇
-  * [CentOS环境搭建](centos/centosenv.md)
-  * [Docker环境搭建](centos/docker.md)
+  * [CentOS环境搭建](centos/centos-service.md)
+  * [Docker环境搭建](centos/docker-service.md)
+  * [CentOS命令大全](centos/centos-command.md)
 
 * 其他
   * [Mac相关](mac/mac.md)
