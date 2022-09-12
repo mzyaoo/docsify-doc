@@ -9,4 +9,20 @@ yum install lsof
 lsof -i :端口 
 ```
 
+#### 查看磁盘占用情况
+> 查看当前目录下占用磁盘清空
+```shell
+du --max-depth=1 -h
+```
+> 查看磁盘使用情况
+```shell
+df -h
+```
+
+
+
+
+
+
+
 [//]: # (#### 编辑文件Vim)
