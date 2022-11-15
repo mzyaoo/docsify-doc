@@ -198,7 +198,7 @@ tar -zxvf nginx-1.22.0.tar.gz -C /opt
 默认配置命令
 ./configure
 指定一些特定参数的配置(更改安装目录为 /opt/nginx)
-./configure --prefix=/opt/nginx
+./configure --prefix=/opt/nginx --with-http_ssl_module --with-http_stub_status_module
 ```
 > 执行编译和安装
 ```shell
