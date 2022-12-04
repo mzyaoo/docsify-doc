@@ -19,10 +19,29 @@ du --max-depth=1 -h
 df -h
 ```
 
+#### tail
+> 监听日志
+```shell
+tail -f file.log
+```
+> 监听指定日志内容输出
+```shell
+tail -f file.log | grep '日志内容' -5
+```
+
+#### vim
+
+> 编辑文件
+```shell
+vim fileName
+```
+
+> 在编辑文件中搜索指定
 
 
+```shell
+从光标所在位置向前查找字符串:/指定内容
 
+从光标所在位置向后查找字符串:?指定内容
+```
 
-
-
-[//]: # (#### 编辑文件Vim)
