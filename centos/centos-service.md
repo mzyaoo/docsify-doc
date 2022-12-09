@@ -194,7 +194,7 @@ yum install -y openssl openssl-devel
 tar -zxvf nginx-1.22.0.tar.gz -C /opt
 ```
 > 安装前配置nginx(Nginx安装目录为 /opt/nginx)
-```dtd
+```shell
 默认配置命令
 ./configure
 指定一些特定参数的配置(更改安装目录为 /opt/nginx)

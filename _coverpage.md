@@ -8,5 +8,6 @@
 - 无人问津也好，技不如人也罢，你都要试着让自己安静下来，做自己该做的事情，而是让内心的烦躁不安，毁掉你本就不多的热情和定理
 
 [GitHub](https://github.com/JavaBoyz)
+[GitEE](https://gitee.com/zhongyizzz)
 [Get Started](README.md)
 
