@@ -256,3 +256,35 @@ npm config set registry https://registry.npm.taobao.org
 ```shell
 npm config get registry
 ```
+
+### Redis
+
+> yum安装Redis
+```shell
+yum install -y redis
+```
+
+> 修改Redis配置文件  /etc/redis.conf
+
+```angular2html
+保护模式:
+protected-mode yes 改为
+protected-mode no
+
+注释:bind 127.0.0.1 取消限制本地访问
+
+修改密码:
+requirepass 123456
+```
+
+> Redis相关命令
+```shell
+# 检查redis运行状态
+systemctl status redis
+
+# 停止redis服务
+systemctl stop redis
+
+# 重启redis服务
+systemctl restart redis
+```
