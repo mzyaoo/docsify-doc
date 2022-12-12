@@ -31,6 +31,24 @@ docker search 镜像名称
 docker pull 镜像名称:版本号
 ```
 
+> 查看Docker镜像相关命令
+```shell
+# 查看Docker中运行的容器
+docker ps
+
+# 查看Docker所有容器
+docker ps -a
+
+# 查看Docker所有镜像
+docker images
+
+# 删除Docker镜像
+docker rmi 镜像ID
+
+# 删除容器
+docker rm 容器ID/容器名称
+```
+
 ### Docker中安装Mongo
 > 下载MongoDB的Docker镜像
 ```shell
