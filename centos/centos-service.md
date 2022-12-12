@@ -267,13 +267,14 @@ yum install -y redis
 > 修改Redis配置文件  /etc/redis.conf
 
 ```angular2html
-保护模式:
+# 保护模式:
 protected-mode yes 改为
 protected-mode no
 
-注释:bind 127.0.0.1 取消限制本地访问
+# 取消限制本地访问
+注释:bind 127.0.0.1 
 
-修改密码:
+# 修改密码:
 requirepass 123456
 ```
 
