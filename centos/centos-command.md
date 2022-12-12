@@ -9,6 +9,27 @@ yum install lsof
 lsof -i :端口 
 ```
 
+#### PS 相关命令
+```shell
+# 查看相关程序PID，例
+ps -ef | grep java
+```
+
+#### 防火墙相关命令
+```shell
+# 查看运行状态
+systemctl status firewalld
+
+# 开启防火墙
+systemctl start firewalld
+
+# 关闭防火墙
+systemctl stop firewalld
+
+# 重启防火墙
+systemctl restart firewalld
+```
+
 #### 查看磁盘占用情况
 > 查看当前目录下占用磁盘清空
 ```shell
