@@ -30,6 +30,15 @@ systemctl stop firewalld
 systemctl restart firewalld
 ```
 
+####清空日志文件
+```shell
+# 命令1：
+> fileName
+
+# 命令2：
+echo > fileName
+```
+
 #### 查看磁盘占用情况
 > 查看当前目录下占用磁盘清空
 ```shell
