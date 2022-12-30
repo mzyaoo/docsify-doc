@@ -30,7 +30,7 @@ systemctl stop firewalld
 systemctl restart firewalld
 ```
 
-####清空日志文件
+#### 清空日志文件
 ```shell
 # 命令1：
 > fileName
