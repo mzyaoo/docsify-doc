@@ -173,7 +173,12 @@ git credential-manager uninstall
 ```
 
 ### Nginx
-[nginx-1.22 点击下载](https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/nginx-1.22.0.tar.gz)
+##### 1、通过Nginx官方提供的安装说明进行安装
+[Nginx官方安装说明地址](https://nginx.org/en/linux_packages.html#RHEL)
+
+##### 2、下载Nginx安装包使用命令进行安装
+[Nginx-1.22安装包](https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/nginx-1.22.0.tar.gz)
+
 > 下载nginx-1.22
 ```shell
 wget https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/nginx-1.22.0.tar.gz
@@ -195,9 +200,9 @@ tar -zxvf nginx-1.22.0.tar.gz -C /opt
 ```
 > 安装前配置nginx(Nginx安装目录为 /opt/nginx)
 ```shell
-默认配置命令
+# 默认配置命令
 ./configure
-指定一些特定参数的配置(更改安装目录为 /opt/nginx)
+# 指定一些特定参数的配置(更改安装目录为 /opt/nginx)
 ./configure --prefix=/opt/nginx --with-http_ssl_module --with-http_stub_status_module
 ```
 > 执行编译和安装
@@ -229,6 +234,9 @@ nginx -c /opt/conf/nginx.conf
 ```
 
 ### Node.js
+##### 1、通过nvm安装NodeJs(可以随意切换NodeJs版本)
+[官方文档地址](https://github.com/nvm-sh/nvm)
+##### 2、通过命令行下载安装NodeJs
 [Node.js-16.15.1 点击下载](https://registry.npmmirror.com/-/binary/node/v16.15.1/node-v16.15.1-linux-x64.tar.gz)
 > 下载Node.js 安装包
 ```shell

@@ -1,10 +1,10 @@
 # Mac相关
 
+
 ### 使用iTerm2连接远端服务器
 
-[//]: # (<details>)
-[//]: # (  <summary><font color="red"></font></summary>)
-> 查看并复制配置文件，放置指定目录
+查看并复制配置文件，放置指定目录：
+
 ```shell
 #!/usr/bin/expect
 
@@ -20,8 +20,6 @@ expect {
     }
 interact
 ```
-[//]: # (</details>)
-
-> 详细配置如图
+详细配置如图：
 
 ![](../static/img/mac/iTerm2.png)
