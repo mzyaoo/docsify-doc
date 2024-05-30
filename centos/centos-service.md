@@ -173,10 +173,10 @@ git credential-manager uninstall
 ```
 
 ### Nginx
-##### 1、通过Nginx官方提供的安装说明进行安装
+##### 方式一：通过Nginx官方提供的安装说明进行安装
 [Nginx官方安装说明地址](https://nginx.org/en/linux_packages.html#RHEL)
 
-##### 2、下载Nginx安装包使用命令进行安装
+##### 方式二：下载Nginx安装包使用命令进行安装
 [Nginx-1.22安装包](https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/nginx-1.22.0.tar.gz)
 
 > 下载nginx-1.22

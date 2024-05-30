@@ -4,7 +4,7 @@
 
 #### CleanMyMac
 
-[下载地址]()
+[下载地址](http://8.146.204.235/alist/app/CleanMyMac)
 
 #### iTerm2
 
