@@ -1,8 +1,58 @@
 # Mac相关
 
+### Mac应用分享
 
-### 使用iTerm2连接远端服务器
+#### CleanMyMac
 
+[下载地址]()
+
+#### iTerm2
+
+[下载地址](https://iterm2.com/)
+
+- ##### iTerm2配色方案（推荐）
+
+1. [安装oh-my-zsh](https://ohmyz.sh/#install)
+
+打开iTerm2的偏好设定
+
+[Profiles](#) - [Colors](#) - [点击Color Presets](#) - [选择Solarized Dark](#)
+
+如图：
+
+![img.png](../static/img/mac/iterm2-set-color.png)
+
+2. 修改主题
+
+```shell
+# 编辑 .zshrc
+vi ~/.zshrc
+
+# 找到 ZSH_THEME="robbyrussell" 修改为 ZSH_THEME="agnoster"
+```
+
+3. 修改字体
+
+```shell
+# 下载字体插件
+git clone https://github.com/powerline/fonts.git
+
+# 进入文件
+cd fonts
+
+# 安装字体插件
+./install.sh
+```
+
+如图：
+
+![img.png](../static/img/mac/iterm2-set-font.png)
+
+效果图：
+
+![img.png](../static/img/mac/iterm2-index.png)
+
+- ##### 使用iTerm2连接远端服务器
 查看并复制配置文件，放置指定目录：
 
 ```shell
