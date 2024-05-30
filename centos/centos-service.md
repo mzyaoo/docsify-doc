@@ -1,7 +1,7 @@
 # CentosOS 环境搭建
 
 ### JDK
-[JDK-1.8 点击下载](https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/jdk-8u333-linux-x64.tar.gz)
+[JDK-1.8 点击下载](https://www.123pan.com/s/hKskjv-0Flbd.html)
 > 下载 JDK-1.8
 ```shell
 wget https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/jdk-8u333-linux-x64.tar.gz
@@ -109,7 +109,7 @@ firewall-cmd --reload
 > mysql配置完成，接下来就可以使用外部可视化工具进行连接
 
 ### Maven
-[maven-3.8.5 点击下载](https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/apache-maven-3.8.5-bin.tar.gz)
+[maven-3.8.5 点击下载](https://www.123pan.com/s/hKskjv-rFlbd.html)
 > 下载 maven-3.8.5
 ```shell
 wget https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/apache-maven-3.8.5-bin.tar.gz
@@ -145,6 +145,20 @@ mvn -version
 ###### 如图
 ![示例图](../static/img/centos/maven_2.png)
 
+> setting.xml配置
+```xml
+<!--本地Maven仓库路径-->
+<localRepository>本地Maven仓库路径</localRepository>
+
+<!--Aliyun镜像地址-->
+<mirror>
+    <id>aliyunmaven</id>
+    <mirrorOf>central</mirrorOf>
+    <name>aliyun maven</name>
+    <url>https://maven.aliyun.com/repository/public</url>
+</mirror>
+```
+
 ### Git
 > yum安装git
 ```shell
@@ -177,7 +191,7 @@ git credential-manager uninstall
 [Nginx官方安装说明地址](https://nginx.org/en/linux_packages.html#RHEL)
 
 ##### 方式二：下载Nginx安装包使用命令进行安装
-[Nginx-1.22安装包](https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/nginx-1.22.0.tar.gz)
+[Nginx-1.22安装包](https://www.123pan.com/s/hKskjv-KFlbd.html)
 
 > 下载nginx-1.22
 ```shell
@@ -296,4 +310,72 @@ systemctl stop redis
 
 # 重启redis服务
 systemctl restart redis
+```
+
+### Minio
+
+> 准备安装目录和文件
+
+```shell
+# 创建安装目录
+mkdir /opt/minio
+# 进入安装目录
+cd  /opt/minio
+# 在线下载二进制文件
+wget https://dl.min.io/server/minio/release/linux-amd64/minio
+```
+
+> 安装
+
+1. 赋权
+
+```shell
+#提权
+chmod +x minio
+```
+
+2. 设置系统环境变量
+
+```shell
+
+# 修改系统配置
+vim /etc/profile
+
+# 旧版使用 MINIO_ACCESS_KEY MINIO_SECRET_KEY，作废时间：Deprecated since version RELEASE.2021-04-22T15-44-28Z.
+# 旧版
+# export MINIO_ACCESS_KEY=admin
+# export MINIO_SECRET_KEY=password
+
+# 最后一行输入(新版) 
+export MINIO_ROOT_USER=admin
+export MINIO_ROOT_PASSWORD=password
+
+# 设置立即生效
+source /etc/profile
+```
+
+3. 创建存储目录及日志文件
+
+```shell
+#创建存储目录
+mkdir -p  /opt/minio/data
+#进入
+cd /opt/minio
+#创建日志文件
+touch minio.log
+```
+
+4. 后台启动
+
+```shell
+# 启动命令
+nohup /opt/minio/minio server --address :9800 --console-address :9889 /opt/minio/data >/opt/minio/minio.log 2>&1 &
+```
+
+5. 尝试访问Minio控制台
+
+```dtd
+注意：访问前请检查对应端口是否开放访问。
+地址：http://ip:9889
+用户名和密码为环境变量中配置的
 ```
