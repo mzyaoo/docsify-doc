@@ -49,7 +49,7 @@ docker rmi 镜像ID
 docker rm 容器ID/容器名称
 ```
 
-### 安装MongoDB
+### MongoDB安装
 > 下载MongoDB的Docker镜像
 ```shell
 docker pull mongo:4.2.5

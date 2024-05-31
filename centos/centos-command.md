@@ -18,7 +18,10 @@ ps -ef | grep java
 #### 防火墙相关命令
 ```shell
 # 查看运行状态
+# 命令一
 systemctl status firewalld
+# 命令二
+firewall-cmd --state
 
 # 开启防火墙
 systemctl start firewalld
@@ -28,6 +31,18 @@ systemctl stop firewalld
 
 # 重启防火墙
 systemctl restart firewalld
+
+# 查看防火墙所有开放的端口
+firewall-cmd --zone=public --list-ports
+
+# 开放防火墙端口
+firewall-cmd --zone=public --add-port=端口号/tcp --permanent
+
+# 关闭防火墙某个端口
+firewall-cmd --zone=public --remove-port=5672/tcp --permanent
+
+# 重新加载防火墙配置
+firewall-cmd --reload
 ```
 
 #### 清空日志文件
