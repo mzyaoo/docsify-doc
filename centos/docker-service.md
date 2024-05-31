@@ -49,7 +49,7 @@ docker rmi 镜像ID
 docker rm 容器ID/容器名称
 ```
 
-### Docker中安装Mongo
+### 安装MongoDB
 > 下载MongoDB的Docker镜像
 ```shell
 docker pull mongo:4.2.5
@@ -213,22 +213,6 @@ firewall-cmd --reload
 - 访问地址进行测试：http://ip:5601
 
 ![image.png](../static/img/docker/elastic.png)
-
-## MongoDB安装
-
-- 下载MongoDB4的docker镜像：
-
-```bash
-docker pull mongo:4
-```
-
-- 使用docker命令启动：
-
-```bash
-docker run -p 27017:27017 --name mongo \
--v /mydata/mongo/db:/data/db \
--d mongo:4
-```
 
 ## RabbitMQ安装
 
