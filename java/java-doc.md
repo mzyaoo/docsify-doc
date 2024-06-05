@@ -2,10 +2,13 @@
 
 > 1、集合中是否包含某个元素
 ```java
-// list集合中是否包含id为4的元素
+// 写法1:list集合中是否包含id为4的元素
 List<String> list = Arrays.asList(new String[] {"1","2","3"});
 String id = "4";
-boolean isPresent = list.stream().filter(w -> w.equals(id)).findAny().isPresent();
+boolean anyMatch = list.stream().filter(w -> w.equals(id)).findAny().isPresent();
+
+// 写法2
+boolean anyMatch = list.stream().anyMatch(s -> s.equals(id));
 ```
 > 2、根据条件过滤集合
 ```java
