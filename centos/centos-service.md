@@ -2,10 +2,7 @@
 
 ### JDK
 [JDK-1.8 点击下载](https://www.123pan.com/s/hKskjv-0Flbd.html)
-> 下载 JDK-1.8
-```shell
-wget https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/jdk-8u333-linux-x64.tar.gz
-```
+
 > 上传并解压至opt目录下
 ```shell
 tar -zxvf jdk-8u333-linux-x64.tar.gz -C /opt
@@ -110,10 +107,7 @@ firewall-cmd --reload
 
 ### Maven
 [maven-3.8.5 点击下载](https://www.123pan.com/s/hKskjv-rFlbd.html)
-> 下载 maven-3.8.5
-```shell
-wget https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/apache-maven-3.8.5-bin.tar.gz
-```
+
 > 上传并解压至/opt/maven目录下
 ```shell
 mkdir /opt/maven
@@ -193,10 +187,6 @@ git credential-manager uninstall
 ##### 方式二：下载Nginx安装包使用命令进行安装
 [Nginx-1.22安装包](https://www.123pan.com/s/hKskjv-KFlbd.html)
 
-> 下载nginx-1.22
-```shell
-wget https://zhongyi-z.oss-cn-beijing.aliyuncs.com/file/nginx-1.22.0.tar.gz
-```
 > 安装nginx依赖环境
 ```shell
 # 1.编译依赖 gcc 环境
