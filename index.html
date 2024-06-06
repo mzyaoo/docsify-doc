@@ -8,12 +8,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="./static/js/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="./static/css/plugins/docsify-dark-mode/index.css">
+<!--  <link rel="stylesheet" href="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/npm/docsify-darklight-theme@latest/dist/style.min.css" />-->
   <link rel="icon" href="icon.png">
 </head>
 <body>
   <div id="app">加载中</div>
 
   <script>
+
+    const giscusTheme = () =>
+            localStorage.getItem('DARK_LIGHT_THEME') === 'dark' ? 'noborder_dark' : 'light';
+
+
     window.$docsify = {
       // 本地运行命令：docsify serve
       // 封面
@@ -67,17 +73,20 @@
       // 侧边栏折叠
       sidebarDisplayLevel: 1,
       // 暗黑风格配置
-      darkMode: {
+      darklightTheme: {
+        defaultTheme: 'light',
+        siteFont: 'Source Sans Pro,Helvetica Neue,Arial,sans-serif',
+        codeFontFamily: 'Roboto Mono, Monaco, courier, monospace',
+        bodyFontSize: '15px',
         dark: {
-          background: "#1c2022",
-          toggleBtnBg: "#34495e",
-          textColor: "#b4b4b4"
+          background: 'rgb(28,32,34)',
+          highlightColor: '#e96900',
+          codeBackgroundColor: 'rgb(34,39,46)',
+          codeTextColor: '#b4b4b4',
         },
         light: {
-          background: "white",
-          toggleBtnBg: "#42b983",
-          textColor: "var(--theme-color)"
-        }
+          highlightColor: '#e96900',
+        },
       },
       // 代码块复制
       copyCode: {
@@ -85,7 +94,22 @@
         errorText: '出现错误！',
         successText: '复制成功！',
       },
-    }
+      // 插件
+      plugins: [
+        function (hook, vm) {
+          hook.doneEach(() => {
+            // 暗黑风格配置
+            document.getElementById('docsify-darklight-theme').addEventListener('click', () => {
+              const frame = document.querySelector('.giscus-frame');
+              frame.contentWindow.postMessage(
+                      {giscus: {setConfig: {theme: giscusTheme()}}},
+                      'https://giscus.app',
+              );
+            });
+          })
+        }
+      ]
+    };
   </script>
   <script src="./static/js/docsify/lib/docsify.min.js"></script>
   <script src="./static/js/docsify/lib/plugins/ga.js"></script>
