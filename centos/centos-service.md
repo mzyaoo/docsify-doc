@@ -380,6 +380,6 @@ nohup /opt/minio/minio server --address :9800 --console-address :9889 /opt/minio
 用户名和密码为环境变量中配置的
 ```
 
-### 搭建个人下载服务
+### 搭建个人存储服务
 
 - 参考文档：https://alist.nn.ci/zh/

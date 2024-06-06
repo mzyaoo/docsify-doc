@@ -1,3 +1,12 @@
+<h1 align="center">小姚随手记</h1>
+<p align="center">
+  <img src="https://img.shields.io/github/languages/code-size/nanchengcyu/TechMindWave-backend" alt="code size"/>
+  <img src="https://img.shields.io/badge/Docsify-blue" alt="Java"/>
+  <img src="https://img.shields.io/github/last-commit/nanchengcyu/TechMindWave-backend" alt="last commit"/><br>
+  <img src="https://img.shields.io/badge/Author-mzyao-orange" alt="Author" />
+</p>
+<hr>
+
 ## 个人简介
 
 > Java工程师   ｜    健身爱好者   ｜   13593554644@163.com
