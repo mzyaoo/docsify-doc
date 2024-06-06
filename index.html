@@ -34,6 +34,7 @@
       loadNavbar: true,
       // 小屏设备下合并导航栏到侧边栏
       mergeNavbar: true,
+      // 侧边栏配置
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md',
         '/.*/_navbar.md': '/_navbar.md'
@@ -53,14 +54,17 @@
         noData: '找不到结果!',
         depth: 3
       },
+      // 页脚
       pagination: {
         previousText: '上一章节',
         nextText: '下一章节',
       },
+      // 代码块隐藏
       hideCode: {
         scroll: false, // 启用滚动
         height: 200 // 折叠高度
       },
+      // 侧边栏折叠
       sidebarDisplayLevel: 1,
       // 暗黑风格配置
       darkMode: {
@@ -74,7 +78,13 @@
           toggleBtnBg: "#42b983",
           textColor: "var(--theme-color)"
         }
-      }
+      },
+      // 代码块复制
+      copyCode: {
+        buttonText: '点击复制',
+        errorText: '出现错误！',
+        successText: '复制成功！',
+      },
     }
   </script>
   <script src="./static/js/docsify/lib/docsify.min.js"></script>
