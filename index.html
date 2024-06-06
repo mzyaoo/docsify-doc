@@ -7,6 +7,7 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="./static/js/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="./static/css/plugins/docsify-dark-mode/index.css">
   <link rel="icon" href="icon.png">
 </head>
 <body>
@@ -18,7 +19,7 @@
       // 封面
       coverpage: true,
       // 侧边栏标题
-      name: '小姚随手记',
+      name: '目录',
       // 右上角图标
       repo: 'https://github.com/mzyaoo',
       // 侧边栏
@@ -40,9 +41,11 @@
       // 字数统计
       count:{
         countable:true,
-        fontsize:'0.9em',
+        fontsize:'1.0em',
         color:'rgb(90,90,90)',
-        language:'chinese'
+        language:'chinese',
+        float:'top',
+        position:'top'
       },
       // 搜索
       search: {
@@ -58,7 +61,20 @@
         scroll: false, // 启用滚动
         height: 200 // 折叠高度
       },
-      sidebarDisplayLevel: 1
+      sidebarDisplayLevel: 1,
+      // 暗黑风格配置
+      darkMode: {
+        dark: {
+          background: "#1c2022",
+          toggleBtnBg: "#34495e",
+          textColor: "#b4b4b4"
+        },
+        light: {
+          background: "white",
+          toggleBtnBg: "#42b983",
+          textColor: "var(--theme-color)"
+        }
+      }
     }
   </script>
   <script src="./static/js/docsify/lib/docsify.min.js"></script>
@@ -73,6 +89,7 @@
   <script src="./static/js/prismjs/components/prism-yaml.js"></script>
   <script src="./static/js/plugins/zoom-image.js"></script>
   <script src="./static/js/plugins/docsify-pagination/index.js"></script>
+  <script src="./static/js/plugins/docsify-dark-mode/index.js"></script>
 <!--  <script src="./static/js/plugins/docsify-sidebar-collapse/index.js"></script>-->
 </body>
 </html>
