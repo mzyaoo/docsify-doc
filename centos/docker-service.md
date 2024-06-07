@@ -147,9 +147,7 @@ chmod 777 /mydata/elasticsearch/data/
 
 - 安装中文分词器IKAnalyzer，注意下载与Elasticsearch对应的版本，下载地址：https://github.com/medcl/elasticsearch-analysis-ik/releases
 
-<div align="left">
-  <img src="/static/img/docker/es-ik.png" width="60%"/>
-</div>
+![image.png](../static/img/docker/es-ik.png)
 
 - 下载完成后解压到Elasticsearch的/mydata/elasticsearch/plugins目录下；
 
@@ -214,9 +212,7 @@ firewall-cmd --reload
 
 - 访问地址进行测试：http://ip:5601
 
-<div align="left">
-  <img src="/static/img/docker/elastic.png" width="60%"/>
-</div>
+![image.png](../static/img/docker/elastic.png)
 
 ## RabbitMQ安装
 
@@ -243,9 +239,7 @@ firewall-cmd --reload
 
 - 访问地址查看是否安装成功：http://ip:15672
 
-<div align="left">
-  <img src="/static/img/docker/rabbitmq.png" width="60%"/>
-</div>
+![image.png](../static/img/docker/rabbitmq.png)
 
 - 输入账号密码并登录：guest guest
 
@@ -275,8 +269,5 @@ docker run -p 6379:6379 --name redis \
 ```bash
 docker exec -it redis redis-cli
 ```
-<div align="left">
-  <img src="/static/img/docker/redis.png" width="60%"/>
-</div>
-
+![image.png](../static/img/docker/redis.png)
 
