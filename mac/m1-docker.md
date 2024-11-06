@@ -1,5 +1,5 @@
 ```shell
-docker pull elasticsearch:8.12.2
+docker pull elasticsearch:7.17.25
 ```
 
 ```shell
@@ -23,7 +23,7 @@ xpack.security.enabled: false
 ```
 
 ```shell
-docker pull kibana:8.12.2
+docker pull kibana:7.17.25
 ```
 
 ```shell
@@ -40,4 +40,17 @@ docker run --name kibana -e ELASTICSEARCH_HOSTS=http://172.17.0.2:9200 -p 5601:5
 # 中文友好地分词插件，官方地址
 # 注意，下载分词器版本要与es、kibana版本一致
 https://github.com/infinilabs/analysis-ik
+
+https://release.infinilabs.com/analysis-ik/stable/
+```
+
+```shell
+# 下载对应版本的ik分词器
+
+# 将下载好的ik分词器copy到es容器中
+
+# 执行安装分词器命令
+docker exec -it elasticsearch:8.12.2 /bin/bash
+
+bin/elasticsearch-plugin install file:分词器压缩包路径
 ```
