@@ -63,6 +63,7 @@ cd fonts
 ![img.png](../static/img/mac/iterm2-index.png)
 
 - ##### 使用iTerm2连接远端服务器
+
 查看并复制配置文件，放置指定目录：
 
 ```shell
@@ -80,6 +81,7 @@ expect {
     }
 interact
 ```
+
 详细配置如图：
 
 ![](../static/img/mac/iTerm2.png)

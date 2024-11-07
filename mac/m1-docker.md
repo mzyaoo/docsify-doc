@@ -1,3 +1,7 @@
+### Docker环境
+
+#### Elasticsearch
+
 ```shell
 docker pull elasticsearch:7.17.25
 ```
@@ -22,6 +26,8 @@ http.port: 9200
 xpack.security.enabled: false
 ```
 
+#### Kibana
+
 ```shell
 docker pull kibana:7.17.25
 ```
@@ -38,7 +44,9 @@ docker run --name kibana -e ELASTICSEARCH_HOSTS=http://172.17.0.2:9200 -p 5601:5
 
 ```markdown
 # 中文友好地分词插件，官方地址
+
 # 注意，下载分词器版本要与es、kibana版本一致
+
 https://github.com/infinilabs/analysis-ik
 
 https://release.infinilabs.com/analysis-ik/stable/
