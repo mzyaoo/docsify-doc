@@ -59,7 +59,7 @@ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' elas
 docker run --name kibana -e ELASTICSEARCH_HOSTS=http://172.17.0.2:9200 -p 5601:5601 -d kibana:7.16.2
 ```
 
-中文友好地分词插件，官方推荐下载地址：
+中文友好地分词插件，遵循官方文档即可自定义词库，[官方地址](https://github.com/infinilabs/analysis-ik/)，官方推荐下载地址：
 
 `注意，下载分词器版本要与es、kibana版本一致`
 
