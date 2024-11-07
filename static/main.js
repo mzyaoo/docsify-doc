@@ -24,13 +24,13 @@ window.$docsify = {
         '/.*/_navbar.md': '/_navbar.md'
     },
     // 字数统计
-    count:{
-        countable:true,
-        fontsize:'1.0em',
-        color:'rgb(90,90,90)',
-        language:'chinese',
-        float:'top',
-        position:'top'
+    count: {
+        countable: true,
+        fontsize: '1.0em',
+        color: 'rgb(90,90,90)',
+        language: 'chinese',
+        float: 'top',
+        position: 'top'
     },
     // 搜索
     search: {
@@ -75,18 +75,18 @@ window.$docsify = {
     // 自定义插件
     plugins: [
         function (hook, vm) {
-            hook.init(function() {
+            hook.init(function () {
                 // 初始化完成后调用，只调用一次，没有参数。
             });
 
-            hook.beforeEach(function(content) {
+            hook.beforeEach(function (content) {
                 // 每次开始解析 Markdown 内容时调用
                 // ...
                 return content;
             });
 
 
-            hook.afterEach(function(html, next) {
+            hook.afterEach(function (html, next) {
                 // 解析成 html 后调用。
                 // beforeEach 和 afterEach 支持处理异步逻辑
                 // ...
@@ -99,13 +99,27 @@ window.$docsify = {
 
             });
 
-            hook.mounted(function() {
+            hook.mounted(function () {
                 // 初始化并第一次加载完成数据后调用，只触发一次，没有参数。
             });
 
-            hook.ready(function() {
+            hook.ready(function () {
                 // 初始化并第一次加载完成数据后调用，没有参数。
             });
         }
-    ]
+    ],
+    'flexible-alerts': {
+        note: {
+            label: "Hinweis"
+        },
+        tip: {
+            label: "Tipp"
+        },
+        warning: {
+            label: "Warnung"
+        },
+        attention: {
+            label: "Achtung"
+        }
+    }
 };
