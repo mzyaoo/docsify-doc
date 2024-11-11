@@ -112,3 +112,13 @@ docker run -d \
 --name oracle19c \
 oracle/database:19.19.0-ee
 ```
+
+oracle创建用户
+```sql
+CREATE USER username IDENTIFIED BY password;
+```
+
+分配用户权限
+```sql
+GRANT CONNECT, RESOURCE TO username;
+```
