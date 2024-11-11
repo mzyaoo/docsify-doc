@@ -43,10 +43,8 @@ vi ~/.zshrc
 ```shell
 # 下载字体插件
 git clone https://github.com/powerline/fonts.git
-
 # 进入文件
 cd fonts
-
 # 安装字体插件
 ./install.sh
 ```
