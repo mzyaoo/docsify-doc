@@ -36,7 +36,6 @@
 ```shell
 # 编辑 .zshrc
 vi ~/.zshrc
-
 # 找到 ZSH_THEME="robbyrussell" 修改为 ZSH_THEME="agnoster"
 ```
 
