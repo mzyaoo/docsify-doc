@@ -14,7 +14,7 @@
 
 #### CleanMyMac
 
-[下载地址](http://8.146.204.235/alist/app/CleanMyMac)
+[下载地址](https://go.naodai.org/Software/CleanMyMac)
 
 #### iTerm2
 
@@ -22,7 +22,7 @@
 
 - ##### iTerm2配色方案（推荐）
 
-1. [安装oh-my-zsh](https://ohmyz.sh/#install)
+1. 安装oh-my-zsh [官方地址](https://ohmyz.sh/#install)
 
 打开iTerm2的偏好设定
 
@@ -33,7 +33,6 @@
 ![img.png](../static/img/mac/iterm2-set-color.png)
 
 2. 修改主题
-
 ```shell
 # 编辑 .zshrc
 vi ~/.zshrc
@@ -42,7 +41,6 @@ vi ~/.zshrc
 ```
 
 3. 修改字体
-
 ```shell
 # 下载字体插件
 git clone https://github.com/powerline/fonts.git
@@ -65,7 +63,6 @@ cd fonts
 - ##### 使用iTerm2连接远端服务器
 
 查看并复制配置文件，放置指定目录：
-
 ```shell
 #!/usr/bin/expect
 
