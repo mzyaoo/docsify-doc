@@ -84,3 +84,31 @@ docker exec -it ES容器ID或容器名称 /bin/bash
 ```shell
 bin/elasticsearch-plugin install file:分词器压缩包路径
 ```
+
+#### Oracle
+
+拉取Oracle镜像，命令如下：
+
+镜像系统架构：``linux/amd64`` ``linux/arm64/v8``
+
+```shell
+docker pull kangaroo1122-docker.pkg.coding.net/project/public/oracle:19c-ee
+```
+
+运行容器，命令如下：
+
+``注意：挂载目录时，需要该目录的读写权限``
+```shell
+# /vm-data/oracle-19c/oradata 为宿主机目录地址
+docker run -d \
+-p 1521:1521 \
+-p 5500:5500 \
+-e ORACLE_PDB=ORCL \
+-e ORACLE_PWD=123456 \
+-e ORACLE_CHARACTERSET=AL32UTF8 \
+-e INIT_SGA_SIZE=3000 \
+-e INIT_PGA_SIZE=1000 \
+-v /vm-data/oracle-19c/oradata:/opt/oracle/oradata \
+--name oracle19c \
+oracle/database:19.19.0-ee
+```
