@@ -147,7 +147,7 @@ select * from dba_db_links;
 -- Sql2:
 select owner,object_name from dba_objects where object_type='DATABASE LINK';--查询时间久
 ```
-
+ 
 查询sql
 ```sql
 -- @LinkName：创建的db-link名称
