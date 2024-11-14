@@ -122,3 +122,41 @@ CREATE USER username IDENTIFIED BY password;
 ```sql
 GRANT CONNECT, RESOURCE TO username;
 ```
+
+> 创建DB-Link
+
+授权
+```sql
+grant CREATE PUBLIC DATABASE LINK,DROP PUBLIC DATABASE LINK to 用户视图; 
+```
+
+创建DB-Link
+```sql
+-- @开头的内容需要手动修改
+-- @LinkName 链接名称;@Username 用户名;@Password 密码
+-- @Host 主机地址;@Port 端口号;@ServerName 服务名
+create public database link @LinkName
+connect to @Username identified by @Password
+using '(DESCRIPTION =(ADDRESS_LIST =(ADDRESS =(PROTOCOL = TCP)(HOST = @Host)(PORT = @Port)))(CONNECT_DATA =(SERVICE_NAME = @ServerName)))';
+```
+
+查询是否创建成功
+```sql
+-- Sql1:
+select * from dba_db_links;
+-- Sql2:
+select owner,object_name from dba_objects where object_type='DATABASE LINK';--查询时间久
+```
+
+查询sql
+```sql
+-- @LinkName：创建的db-link名称
+-- table：db-link链接的数据库表名
+select * from table@LinkName
+```
+
+删除DB-Link
+```sql
+-- @LinkName：创建的db-link名称
+drop public database link @LinkName
+```
