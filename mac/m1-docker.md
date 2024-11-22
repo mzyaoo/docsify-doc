@@ -118,10 +118,17 @@ oracle创建用户
 CREATE USER username IDENTIFIED BY password;
 ```
 
-分配用户权限
+> 授权
+
+相关Sql
 ```sql
-GRANT CONNECT, RESOURCE TO username;
+GRANT CONNECT, RESOURCE, DBA TO username;
 ```
+
+权限描述<br/>
+`DBA`: 拥有全部特权，是系统最高权限，只有DBA才可以创建数据库结构。<br/>
+`RESOURCE`: 拥有Resource权限的用户只可以创建实体，不可以创建数据库结构。<br/>
+`CONNECT`: 拥有Connect权限的用户只可以登录Oracle，不可以创建实体，不可以创建数据库结构。<br/>
 
 > 创建DB-Link
 
