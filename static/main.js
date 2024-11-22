@@ -32,12 +32,6 @@ window.$docsify = {
         float: 'top',
         position: 'top'
     },
-    // 右侧目录
-    toc: {
-        scope: '.markdown-section',
-        headings: 'h4, h5, h6',
-        title: '目录',
-    },
     // tab
     tabs: {
         persist: true, // default
