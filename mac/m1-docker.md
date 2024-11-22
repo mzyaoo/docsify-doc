@@ -85,7 +85,7 @@ docker exec -it ES容器ID或容器名称 /bin/bash
 bin/elasticsearch-plugin install file:分词器压缩包路径
 ```
 
-#### Oracle
+#### Oracle-19c版本
 
 拉取Oracle镜像，命令如下：
 

@@ -1,3 +1,5 @@
+## 插件语法案例
+
 代码块折叠用法：
 
 <details>
@@ -8,3 +10,20 @@
   </pre>
 </details>
 
+Tab栏用法：
+
+<!-- tabs:start -->
+
+#### **English**
+
+Hello!
+
+#### **French**
+
+Bonjour!
+
+#### **Italian**
+
+Ciao!
+
+<!-- tabs:end -->
