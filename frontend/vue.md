@@ -51,9 +51,9 @@
 ```
 
 - 2、
-    vm.$watch("被监视属性",function(newValue, oldValue){
-        console.log("")
-    })
+  vm.$watch("被监视属性",function(newValue, oldValue){
+  console.log("")
+  })
 
 
 
@@ -61,9 +61,9 @@
 
 官方文档：https://cn.vuejs.org/v2/guide/filters.html
 filters:{
-    过滤器名称(value){
-        return value.toUpperCase();
-    }
+过滤器名称(value){
+return value.toUpperCase();
+}
 }
 
 六、自定义指令
