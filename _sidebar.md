@@ -1,9 +1,9 @@
 <!-- 侧边栏配置文件 -->
 
 * 部署篇
-  * [CentOS环境搭建](centos/centos-service.md)
-  * [Docker环境搭建](centos/docker-service.md)
-  * [CentOS命令相关](centos/centos-command.md)
+  * [CentOS环境搭建](centos/service)
+  * [Docker环境搭建](centos/docker)
+  * [CentOS命令相关](centos/command)
 
 * 前端
   * [Echarts图表](frontend/echarts.md)
