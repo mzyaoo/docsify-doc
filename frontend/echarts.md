@@ -6,15 +6,15 @@
 
 > GeoJSON 地理数据格式
 
-#### GeoJSON相关资源
+**GeoJSON相关资源**
 
-GeoJSON工具：
-- https://geojson.cn
+*GeoJSON工具：*
+1. https://geojson.cn
 
-GeoJSON优质仓库：
-- [echarts-map-demo](https://github.com/TangSY/echarts-map-demo)
+*GeoJSON优质仓库：*
+1. [echarts-map-demo](https://github.com/TangSY/echarts-map-demo)
 
-示例代码：
+*示例代码：*
 ```javascript
 // 此处案例使用jquery请求json文件获取geojson数据
 // 加载geojson.json文件
