@@ -9,7 +9,7 @@ tar -zxvf jdk-8u333-linux-x64.tar.gz -C /opt
 ```
 **如图**
 <p>
-<img src="../static/img/centos/java_1.png" width="60%" height="60%" alt="最终示例图">
+<img src="static/img/centos/java_1.png" width="60%" height="60%" alt="最终示例图">
 </p>
 
 > 配置java全局环境变量
@@ -33,7 +33,7 @@ java -version
 ```
 **如图**
 <p>
-<img src="../static/img/centos/java_2.png" alt="最终示例图">
+<img src="static/img/centos/java_2.png" alt="最终示例图">
 </p>
 
 ### MySql-8.0
@@ -123,7 +123,7 @@ cd /opt/maven
 
 mkdir MyRepository
 ```
-![解压示例图](../static/img/centos/maven_1.png)
+![解压示例图](static/img/centos/maven_1.png)
 
 > 配置Maven全局环境变量
 ```shell
@@ -143,7 +143,7 @@ source /etc/profile
 mvn -version
 ```
 ###### 如图
-![解压示例图](../static/img/centos/maven_2.png)
+![解压示例图](static/img/centos/maven_2.png)
 
 > setting.xml配置
 ```xml
