@@ -1,4 +1,5 @@
 window.$docsify = {
+    basePath: '/docsify-doc/',
     // 本地运行命令：docsify serve
     // 封面
     coverpage: true,
