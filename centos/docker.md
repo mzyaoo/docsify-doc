@@ -147,7 +147,9 @@ chmod 777 /mydata/elasticsearch/data/
 
 - 安装中文分词器IKAnalyzer，注意下载与Elasticsearch对应的版本，下载地址：https://github.com/medcl/elasticsearch-analysis-ik/releases
 
-![image.png](../static/img/docker/es-ik.png)
+<p>
+<img src="../static/img/docker/es-ik.png" width="60%" height="60%" alt="最终示例图">
+</p>
 
 - 下载完成后解压到Elasticsearch的/mydata/elasticsearch/plugins目录下；
 
@@ -212,7 +214,9 @@ firewall-cmd --reload
 
 - 访问地址进行测试：http://ip:5601
 
-![image.png](../static/img/docker/elastic.png)
+<p>
+<img src="../static/img/docker/elastic.png" width="60%" height="30%" alt="最终示例图">
+</p>
 
 ## RabbitMQ安装
 
