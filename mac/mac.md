@@ -52,15 +52,14 @@ cd fonts
 
 **如图**
 <p>
-<img src="../static/img/mac/iterm2-set-font.png" width="40%" height="30%" alt="最终示例图">
+<img src="/static/img/mac/iterm2-set-font.png" width="40%" height="30%" alt="最终示例图">
 </p>
 
 
 **效果图**
 <p>
-<img src="../static/img/mac/iterm2-index.png" width="40%" height="30%" alt="最终示例图">
+<img src="/static/img/mac/iterm2-index.png" width="40%" height="30%" alt="最终示例图" />
 </p>
-
 
 - ##### 使用iTerm2连接远端服务器
 
@@ -83,5 +82,5 @@ interact
 
 **详细配置如图**
 <p>
-<img src="../static/img/mac/iTerm2.png" width="40%" height="30%" alt="最终示例图">
+<img src="/static/img/mac/iTerm2.png" width="40%" height="30%" alt="最终示例图">
 </p>
