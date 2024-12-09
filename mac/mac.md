@@ -82,5 +82,5 @@ interact
 
 **详细配置如图**
 <p>
-<img src="/static/img/mac/iTerm2.png" width="40%" height="30%" alt="最终示例图">
+<img src="../static/img/mac/iTerm2.png" width="40%" height="30%" alt="最终示例图">
 </p>
