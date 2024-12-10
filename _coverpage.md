@@ -6,6 +6,5 @@
 - 欢迎交流学习！
 
 [GitHub](https://github.com/mzyaoo)
-[Github](https://github.com/mzyaoo)
 [Get-Started](README.md)
 
