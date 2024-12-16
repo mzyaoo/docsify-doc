@@ -179,9 +179,23 @@ drop public database link @LinkName
 docker pull nacos/nacos-server:v2.2.0-slim
 ```
 
+参数描述：
+- `-e MODE=standalone`：单机模式启动
+- `-p 8848:8848`：主端口 (HTTP): 默认为8848，此端口用于客户端、控制台及OpenAPI的HTTP通信。
+- `-p 9848:9848`：客户端gRPC端口: 默认为主端口+1000，即9848，用于客户端通过gRPC协议向服务端发起连接和请求。
+- `-p 9849:9849`：服务端gRPC端口: 默认为主端口+1001，即9849，用于服务间同步等内部通信。
+
+> [!Warning]
+> 对于暴露的端口描述，也可查看官方解释：https://nacos.io/en/blog/faq/nacos-user-question-history15220/
+
 启动 Nacos，命令如下：
 ```shell
-docker run --name Nacos-2.2.0 -e MODE=standalone -p 8848:8848 -p 9848:9848 -p 9849:9849 -d nacos/nacos-server:v2.2.0-slim
+docker run --name Nacos-2.2.0 \
+    -e MODE=standalone \
+    -p 8848:8848 \
+    -p 9848:9848 \
+    -p 9849:9849 \
+    -d nacos/nacos-server:v2.2.0-slim
 ```
 
 成功示例图：
