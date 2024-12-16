@@ -174,7 +174,7 @@ drop public database link @LinkName
 > 获取镜像前请确认`SpringBoot`或者`SpringCloud`版本，请查看 [版本关系](backend/springcloud.md)</br>
 > 此案例为 MacOS M1 芯片电脑环境，使用的版本为 v2.2.0-slim，对应的 SpringBoot版本为2.7.18
 
-拉取Kibana镜像，命令如下：
+拉取 Nacos 镜像，命令如下：
 ```shell
 docker pull nacos/nacos-server:v2.2.0-slim
 ```
