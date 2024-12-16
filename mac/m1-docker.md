@@ -167,3 +167,24 @@ select * from table@LinkName
 -- @LinkName：创建的db-link名称
 drop public database link @LinkName
 ```
+
+#### Nacos
+
+> [!Warning]
+> 获取镜像前请确认`SpringBoot`或者`SpringCloud`版本，请查看 [版本关系](backend/springcloud.md)</br>
+> 此案例为 MacOS M1 芯片电脑环境，使用的版本为 v2.2.0-slim，对应的 SpringBoot版本为2.7.18
+
+拉取Kibana镜像，命令如下：
+```shell
+docker pull nacos/nacos-server:v2.2.0-slim
+```
+
+启动 Nacos，命令如下：
+```shell
+docker run --name Nacos-2.2.0 -e MODE=standalone -p 8848:8848 -p 9848:9848 -p 9849:9849 -d nacos/nacos-server:v2.2.0-slim
+```
+
+成功示例图：
+<p>
+<img src="static/img/mac/nacos.png" width="60%" height="60%" alt="最终示例图">
+</p>

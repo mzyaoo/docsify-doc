@@ -9,7 +9,8 @@
   * [Echarts图表](frontend/echarts.md)
 
 * 后端
-  * [插件](backend/plugin.md)
+  * [中间件](backend/plugin.md)
+  * [SpringCloud](backend/springcloud.md)
 
 * 其他
   * [M1-Mac本地开发环境搭建](mac/m1-docker.md)
