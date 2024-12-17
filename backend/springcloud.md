@@ -7,25 +7,25 @@
 #### **2021.0.x**
 
 <p>
-<img src="static/img/springcloud/2021.x.1.png" width="60%" height="60%" alt="最终示例图">
+<img src="/static/img/springcloud/2021.x.1.png" width="60%" height="60%" alt="最终示例图">
 </p>
 <p>
-<img src="static/img/springcloud/2021.x.2.png" width="60%" height="60%" alt="最终示例图">
+<img src="/static/img/springcloud/2021.x.2.png" width="60%" height="60%" alt="最终示例图">
 </p>
 
 #### **2022.0.x**
 
 <p>
-<img src="static/img/springcloud/2022.x.1.png" width="60%" height="60%" alt="最终示例图">
+<img src="/static/img/springcloud/2022.x.1.png" width="60%" height="60%" alt="最终示例图">
 </p>
 <p>
-<img src="static/img/springcloud/2022.x.2.png" width="60%" height="60%" alt="最终示例图">
+<img src="/static/img/springcloud/2022.x.2.png" width="60%" height="60%" alt="最终示例图">
 </p>
 
 #### **2023.0.x**
 
 <p>
-<img src="static/img/springcloud/2023.x.png" width="60%" height="60%" alt="最终示例图">
+<img src="/static/img/springcloud/2023.x.png" width="60%" height="60%" alt="最终示例图">
 </p>
 
 <!-- tabs:end -->
