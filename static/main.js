@@ -1,3 +1,4 @@
+console.log(window.location.hostname);
 window.$docsify = {
     basePath: window.location.hostname === 'localhost' ? '/' : '/docsify-doc/',
     // 本地运行命令：docsify serve
