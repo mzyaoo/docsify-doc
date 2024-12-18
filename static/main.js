@@ -1,6 +1,5 @@
 window.$docsify = {
-    // basePath: window.location.hostname === "localhost" ? "/" : "/docsify-doc/",
-    basePath: "/docsify-doc/",
+    basePath: window.location.hostname === "localhost" ? "/" : "/docsify-doc/",
     // 本地运行命令：docsify serve
     // 封面
     coverpage: true,
