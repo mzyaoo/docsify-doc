@@ -1,10 +1,7 @@
-console.log(window.location.hostname);
-console.log(window.location.hostname === 'localhost' ? '/' : '/docsify-doc/');
 window.$docsify = {
-    // basePath: window.location.hostname === 'localhost' ? '/' : '/docsify-doc/',
+    basePath: window.location.hostname === "localhost" ? "/" : "/docsify-doc/",
     // 本地运行命令：docsify serve
     // 封面
-    relativePath: true,
     coverpage: true,
     // 侧边栏标题
     name: '目录',
