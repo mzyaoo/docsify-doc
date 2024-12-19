@@ -1,6 +1,20 @@
 #### 版本关系
 
-以下为官方截图，具体信息请参考官方文档：https://sca.aliyun.com/
+以下为官方截图，具体信息请参考官方文档：https://sca.aliyun.com/ <br/>
+
+个人 Demo 地址：https://github.com/mzyaoo/cloud-example
+
+**Demo 版本说明**
+
+- JDK版本：1.8
+- Spring Boot 2.7.18
+- Spring Cloud 2021.0.5
+- Spring Cloud Alibaba 2021.0.6.2
+- 分布式事务：seata
+- 注册配置中心：naces
+- 网关：gateway
+- 服务熔断降级：sentinel
+- 服务调用：openfeign
 
 <!-- tabs:start -->
 
