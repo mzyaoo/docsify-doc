@@ -32,7 +32,7 @@
 
 #### 项目 Demo
 
-Demo 地址：https://github.com/mzyaoo/cloud-example
+Demo 地址：https://github.com/mzyaoo/spring-cloud-example
 
 **Demo 版本说明**
 
