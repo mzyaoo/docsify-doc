@@ -239,12 +239,11 @@ firewall-cmd --zone=public --add-port=15672/tcp --permanent
 firewall-cmd --reload
 ```
 
-**访问地址查看是否安装成功：http://ip:15672**
+**访问地址查看是否安装成功：http://ip:15672**<br/>
+**默认的用户名和密码为：`guest`**
 <p>
 <img src="static/img/docker/rabbitmq.png" width="60%" height="60%" alt="最终示例图">
 </p>
-
-- 输入账号密码并登录：guest guest
 
 ## Redis安装
 
@@ -254,9 +253,9 @@ firewall-cmd --reload
 docker pull redis:7
 ```
 
-- 下载redis配置文件
-    - 官网链接：[Redis](https://redis.io/download/)
-    - 将下载包中的redis.conf 放入/mydata/redis/config中
+下载redis配置文件
+- 官网链接：[Redis](https://redis.io/download/)
+- 将下载包中的 `redis.conf` 放入 `/mydata/redis/config` 中
 
 **使用如下命令启动Redis服务：**
 
