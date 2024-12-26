@@ -55,13 +55,13 @@ yum localinstall -y mysql80-community-release-el7-5.noarch.rpm
 ```shell
 yum search mysql-community
 ```
-**安装 mysql-community-server
+**安装 mysql-community-server**
 ```shell
 yum install -y mysql-community-server
 ```
 > [!Warning]
 > 可能出现软件包不适用错误，错误图例如下。 <br/>
-> 出现错误请使用此命令：yum install mysql-server --nogpgcheck
+> 出现错误请使用此命令：`yum install mysql-server --nogpgcheck`
 
 <p>
 <img src="static/img/centos/mysql-error-01.png" width="60%" height="60%" alt="最终示例图">
@@ -179,7 +179,7 @@ mvn -version
 ```shell
 yum install git
 ```
-**生成Key
+**生成Key**
 ```shell
 ssh-keygen -t rsa -b 2048 -C "任意字符建议邮箱"
 ```
