@@ -3,16 +3,16 @@
 ### JDK
 [JDK-1.8 点击下载](https://www.123pan.com/s/hKskjv-0Flbd.html)
 
-> 上传并解压至opt目录下
+**上传并解压至opt目录下**
 ```shell
 tar -zxvf jdk-8u333-linux-x64.tar.gz -C /opt
 ```
-**如图**
+***如图***
 <p>
 <img src="static/img/centos/java_1.png" width="60%" height="60%" alt="最终示例图">
 </p>
 
-> 配置java全局环境变量
+**配置java全局环境变量**
 ```shell
 # 1.编辑系统环境配置文件
 vim /etc/profile
@@ -27,80 +27,91 @@ export PATH JAVA_HOME CLASSPATH
 # 3.刷新配置文件
 source /etc/profile
 ```
-> 检查是否安装成功
+**检查是否安装成功**
 ```shell
 java -version
 ```
-**如图**
+***如图***
 <p>
 <img src="static/img/centos/java_2.png" alt="最终示例图">
 </p>
 
 ### MySql-8.0
->创建并进入mysql文件夹
+**创建并进入mysql文件夹**
 ```shell
 mkdir /opt/mysql
 
 cd /opt/mysql
 ```
-> 下载mysql rpm包
+**下载mysql rpm包**
 ```shell
 wget https://dev.mysql.com/get/mysql80-community-release-el7-5.noarch.rpm
 ```
-> 安装mysql
+**安装mysql**
 ```shell
 yum localinstall -y mysql80-community-release-el7-5.noarch.rpm
 ```
-> yum仓库中查找mysql
+**yum仓库中查找mysql**
 ```shell
 yum search mysql-community
 ```
-> 安装 mysql-community-server
+**安装 mysql-community-server
 ```shell
 yum install -y mysql-community-server
 ```
-> 以上没有报错的情况下，表示mysql安装完成，启动mysql
+> [!Warning]
+> 可能出现软件包不适用错误，错误图例如下。 <br/>
+> 出现错误请使用此命令：yum install mysql-server --nogpgcheck
+
+<p>
+<img src="static/img/centos/mysql-error-01.png" width="60%" height="60%" alt="最终示例图">
+</p>
+
+**以上没有报错的情况下，表示mysql安装完成，mysql相关命令**
 ```shell
+# 启动
 systemctl start mysqld
-```
-> 查看mysql当前状态
-```shell
+
+# 停止
+systemctl stop mysqld
+
+# 检查状态
 systemctl status mysqld
-```
-> 设置mysql开机启动
-```shell
+
+# 设置开机启动
 systemctl enable mysqld
 ```
-> 查看mysql运行日志，获取默认密码
+
+**查看mysql运行日志，获取默认密码**
 ```shell
 vi /var/log/mysqld.log
 ```
-> 登录mysql
+**登录mysql**
 ```shell
 mysql -uroot -p
 输入从日志获取到的默认密码
 ```
-> 修改密码
+**修改密码**
 ```shell
 alter user 'root'@'localhost' identified with mysql_native_password by '66alwWqIat!sas';
 ```
-> 查看所有的数据库
+**查看所有的数据库**
 ```shell
 show databases;
 ```
-> 使用mysql库
+**使用mysql库**
 ```shell
 use mysql;
 ```
-> 让root用户可以在任意主机登陆
+**让root用户可以在任意主机登陆**
 ```shell
 update user set host = '%' where user = 'root';
 ```
-> 使以上配置生效
+**使以上配置生效**
 ```shell
 flush privileges;
 ```
-> 打开防火墙,放行对应mysql服务端口,如果是云服务器，可以在控制台配置防火墙规则
+**打开防火墙,放行对应mysql服务端口,如果是云服务器，可以在控制台配置防火墙规则**
 ```shell
 # 添加放行3306端口
 firewall-cmd --zone=public --permanent --add-port=3306/tcp
@@ -108,12 +119,12 @@ firewall-cmd --zone=public --permanent --add-port=3306/tcp
 # 将防火墙配置重载
 firewall-cmd --reload
 ```
-> mysql配置完成，接下来就可以使用外部可视化工具进行连接
+**mysql配置完成，接下来就可以使用外部可视化工具进行连接**
 
 ### Maven
 [maven-3.8.5 点击下载](https://www.123pan.com/s/hKskjv-rFlbd.html)
 
-> 上传并解压至/opt/maven目录下
+**上传并解压至/opt/maven目录下**
 ```shell
 mkdir /opt/maven
 
@@ -123,9 +134,11 @@ cd /opt/maven
 
 mkdir MyRepository
 ```
-![解压示例图](static/img/centos/maven_1.png)
+<p>
+<img src="static/img/centos/maven_1.png" alt="最终示例图">
+</p>
 
-> 配置Maven全局环境变量
+**配置Maven全局环境变量**
 ```shell
 # 1.编辑系统环境配置文件
 vim /etc/profile
@@ -138,14 +151,16 @@ export PATH=$PATH:$JAVA_HOME/bin:$MAVEN_HOME/bin
 # 3.刷新配置文件
 source /etc/profile
 ```
-> 检查是否安装成功
+**检查是否安装成功**
 ```shell
 mvn -version
 ```
-###### 如图
-![解压示例图](static/img/centos/maven_2.png)
+***如图***
+<p>
+<img src="static/img/centos/maven_2.png" alt="最终示例图">
+</p>
 
-> setting.xml配置
+**setting.xml配置**
 ```xml
 <!--本地Maven仓库路径-->
 <localRepository>本地Maven仓库路径</localRepository>
@@ -160,28 +175,28 @@ mvn -version
 ```
 
 ### Git
-> yum安装git
+**yum安装git**
 ```shell
 yum install git
 ```
-> 生成Key
+**生成Key
 ```shell
 ssh-keygen -t rsa -b 2048 -C "任意字符建议邮箱"
 ```
-> 配置用户名和邮箱：
+**配置用户名和邮箱：**
 ```shell
 git config --global user.name "username"
 git config --global user.email "useremail@qq.com"
 ```
-> 清除配置中纪录的用户名和密码：
+**清除配置中纪录的用户名和密码：**
 ```shell
 git config --system --unset credential.helper
 ```
-> 执行pull或push后，缓存git用户名和密码
+**执行pull或push后，缓存git用户名和密码**
 ```shell
 git config --global credential.helper store
 ```
-> 清除git缓存中的用户名的密码
+**清除git缓存中的用户名的密码**
 ```shell
 git credential-manager uninstall
 ```
@@ -193,7 +208,7 @@ git credential-manager uninstall
 ##### 方式二：下载Nginx安装包使用命令进行安装
 [Nginx-1.22安装包](https://www.123pan.com/s/hKskjv-KFlbd.html)
 
-> 安装nginx依赖环境
+**安装nginx依赖环境**
 ```shell
 # 1.编译依赖 gcc 环境
 yum install gcc-c++
@@ -204,32 +219,33 @@ yum install -y zlib zlib-devel
 # 4.安装openssl库,支持https
 yum install -y openssl openssl-devel
 ```
-> 上传并解压至opt目录下
+**上传并解压至opt目录下**
 ```shell
 tar -zxvf nginx-1.22.0.tar.gz -C /opt
 ```
-> 安装前配置nginx(Nginx安装目录为 /opt/nginx)
+**安装前配置nginx(Nginx安装目录为 /opt/nginx)**
 ```shell
 # 默认配置命令
 ./configure
 # 指定一些特定参数的配置(更改安装目录为 /opt/nginx)
 ./configure --prefix=/opt/nginx --with-http_ssl_module --with-http_stub_status_module
 ```
-> 执行编译和安装
+**执行编译和安装**
 ```shell
 make && make install 
 ```
-> 查看nginx安装目录
+**查看nginx安装目录**
 ```shell
 whereis nginx
 默认安装目录: /usr/local/nginx
 ```
 > 配置nginx全局环境变量
-> 将nginx安装目录下的启动文件建立软连接至系统环境变量目录中
+
+**将nginx安装目录下的启动文件建立软连接至系统环境变量目录中**
 ```shell
 ln -s /opt/nginx/sbin/nginx /usr/local/bin/
 ```
-> 相关命令
+**相关命令**
 ```shell
 # 重新加载配置文件
 nginx -s reload
@@ -248,41 +264,41 @@ nginx -c /opt/conf/nginx.conf
 [官方文档地址](https://github.com/nvm-sh/nvm)
 ##### 2、通过命令行下载安装NodeJs
 [Node.js-16.15.1 点击下载](https://registry.npmmirror.com/-/binary/node/v16.15.1/node-v16.15.1-linux-x64.tar.gz)
-> 下载Node.js 安装包
+**下载Node.js 安装包**
 ```shell
 wget https://registry.npmmirror.com/-/binary/node/v16.15.1/node-v16.15.1-linux-x64.tar.gz
 ```
-> 解压至/opt目录中
+**解压至/opt目录中**
 ```shell
 tar -zxvf node-v16.15.1-linux-x64.tar.gz -C /opt/
 ```
-> 建立软链接,全局使用node命令和npm命令
+**建立软链接,全局使用node命令和npm命令**
 ```shell
 ln -s /opt/node-v16.15.1-linux-x64/bin/node /usr/local/bin/node
 ln -s /opt/node-v16.15.1-linux-x64/bin/npm /usr/local/bin/npm
 ```
-> 检查是否安装成功
+**检查是否安装成功**
 ```shell
 node -v
 npm -v
 ```
-> npm配置国内镜像源
+**npm配置国内镜像源**
 ```shell
 npm config set registry https://registry.npm.taobao.org
 ```
->查看npm镜像源地址
+**查看npm镜像源地址**
 ```shell
 npm config get registry
 ```
 
 ### Redis
 
-> yum安装Redis
+**yum安装Redis**
 ```shell
 yum install -y redis
 ```
 
-> 修改Redis配置文件  /etc/redis.conf
+**修改Redis配置文件  /etc/redis.conf**
 
 ```angular2html
 # 保护模式:
@@ -296,7 +312,7 @@ protected-mode no
 requirepass 123456
 ```
 
-> Redis相关命令
+**Redis相关命令**
 ```shell
 # 检查redis运行状态
 systemctl status redis
@@ -310,7 +326,7 @@ systemctl restart redis
 
 ### Minio
 
-> 准备安装目录和文件
+**准备安装目录和文件**
 
 ```shell
 # 创建安装目录
@@ -321,7 +337,7 @@ cd  /opt/minio
 wget https://dl.min.io/server/minio/release/linux-amd64/minio
 ```
 
-> 安装
+**安装**
 
 1. 赋权
 
