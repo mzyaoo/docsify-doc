@@ -55,7 +55,7 @@ Demo 地址：https://github.com/mzyaoo/spring-cloud-example
 
 > 完成情况
 
-完成 nacos、sentinel、openfeign、gateway、knife4j接口文档的整合
+完成 nacos、sentinel、openfeign、gateway、knife4j接口文档的整合、分布式事务 seata 初步完成
 
 > 问题总结（已解决）
 
