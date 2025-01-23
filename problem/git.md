@@ -1,6 +1,4 @@
-#### Git
-
-**代理导致的网络问题**
+> 1、代理导致的网络问题
 
 <p>
 <img src="static/img/problem/git-01.png" width="60%" height="60%" alt="最终示例图">
